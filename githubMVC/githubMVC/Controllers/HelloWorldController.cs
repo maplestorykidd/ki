@@ -13,9 +13,9 @@ namespace githubMVC.Controllers
         {
             return "This is my <b>default</b> action...";
         }
-        public string Welcome()
+        public string Welcome(string name, int numTimes = 1)
         {
-            return "This is the Welcome action method...";
+            return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
         }
     }
 }
