@@ -17,6 +17,7 @@ namespace githubMVC.Controllers
         // GET: Movies
         public ActionResult Index(String searchString)
         {
+            //string searchString = id;
             var movies = from m in db.Movies
             select m;
             //linQ查询
