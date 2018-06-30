@@ -1,0 +1,6 @@
+CSRF（Cross-site request forgery），中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF。
+攻击者盗用了你的身份，以你的名义发送恶意请求。CSRF能够做的事情包括：以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账......造成的问题包括：个人隐私泄露以及财产安全。
+
+在Html表单里面使用了@Html.AntiForgeryToken()就可以阻止CSRF攻击。
+相应的我们要在Controller中也要加入[ValidateAntiForgeryToken]过滤特性。该特性表示检测服务器请求是否被篡改。
+注意：该特性只能用于post请求，get请求无效。
